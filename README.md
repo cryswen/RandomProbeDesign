@@ -1,7 +1,7 @@
 # RandomProbeDesign
 Design an oligo that is unique enough for c.elegans and yeast for smFISH experiment
 
-## Probe screening
+## Probe screening through blast
 
 #### Install Blast+ by following the NCBI guideline: https://www.ncbi.nlm.nih.gov/books/NBK279671/
 
@@ -15,3 +15,14 @@ run changefilter.py to change the selection parameter qcover and output new filt
 #### To make new database for blast, refer to: https://www.ncbi.nlm.nih.gov/books/NBK279688/
 
 #### use 'blastn -help' to see available functions
+
+## filtering through melting temperature
+#### aim at 60-70dC (70dC preferred)
+
+Adjust IDT parameters to:\\
+  choose 'RNA'
+  oligo 0.5
+  Na+ 330
+  Mg2+ 0
+And check the melting temperature.
+
