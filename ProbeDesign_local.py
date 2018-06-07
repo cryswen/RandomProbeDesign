@@ -4,13 +4,13 @@ import pandas as pd
 
 print('Blasting qurey sequences against c.elegans W265 transcriptome...')
 
-command = 'blastn -query query.fa -db /Users/wenxu/blastdb/c_elegans.PRJNA13758.WS265.mRNA_transcripts.fa -task blastn -evalue 1000 -dust no -outfmt "10 qseqid sseqid qcovs pident" -max_target_seqs 100 >> elegans_blast.csv'
+command = 'blastn -query query.fa -db /Users/wenxu/blastdb/c_elegans.PRJNA13758.WS265.mRNA_transcripts.fa -task blastn -evalue 1000 -num_threads 4 -dust no -outfmt "10 qseqid sseqid qcovs pident" -max_target_seqs 100 >> elegans_blast.csv'
 
 os.system(command)
 
 print('Blasting qurey sequences against yeast S288C transcriptome...')
 
-command = 'blastn -query query.fa -db /Users/wenxu/blastdb/yeast_S288C_rna_genomic_1000.fasta -task blastn -evalue 1000 -dust no -outfmt "10 qseqid sseqid qcovs pident" -max_target_seqs 100 >> yeast_blast.csv'
+command = 'blastn -query query.fa -db /Users/wenxu/blastdb/yeast_S288C_rna_genomic_1000.fasta -task blastn -evalue 1000 -num_threads 4 -dust no -outfmt "10 qseqid sseqid qcovs pident" -max_target_seqs 100 >> yeast_blast.csv'
 
 os.system(command)
 
