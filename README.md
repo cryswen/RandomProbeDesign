@@ -1,4 +1,5 @@
 # RandomProbeDesign
+
 Design a 30bp long oligo that is unique enough for c.elegans and yeast for smFISH experiment. This oligo will serve as the complimentary sequence for a dye-carrier probe to recognize.
 
 ## Probe screening through blast
@@ -10,6 +11,7 @@ Goal: select a random 30bp sequence that is relatively unique to c.elegans and y
 run make_query.py file to make 1000000 random 30bp sequences.
 
 run ProbeDesign_local.py to blast random sequences against c.elegans transcriptome and yeast transcriptome.
+
 #### This code ouputs the sequences with less or equal than 50% maximum query cover to elegans and yeast transcriptome.
 
 run changefilter.py to change the selection parameter qcover and output new filtered file.
@@ -19,18 +21,20 @@ run changefilter.py to change the selection parameter qcover and output new filt
 #### use 'blastn -help' to see available functions
 
 ## filtering through melting temperature
+
 Goal: select a probe with melting temperature at 60-70dC (70dC preferred).
+
 #### Select parameters
 
 Adjust IDT parameters to:
 
-choose 'RNA'
+  choose 'RNA'
 
-oligo 0.5
+  oligo 0.5
 
-Na+ 330
+  Na+ 330
 
-Mg2+ 0
+  Mg2+ 0
 
 run idtAnalyzer.py to take the output of blasted sequence and calculate the melting temperature.
 
