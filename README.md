@@ -21,11 +21,16 @@ run changefilter.py to change the selection parameter qcover and output new filt
 ## filtering through melting temperature
 Goal: select a probe with melting temperature at 60-70dC (70dC preferred).
 #### Select parameters
-Adjust IDT parameters to:\\
-  choose 'RNA'
-  oligo 0.5
-  Na+ 330
-  Mg2+ 0
+
+Adjust IDT parameters to:
+
+choose 'RNA'
+
+oligo 0.5
+
+Na+ 330
+
+Mg2+ 0
 
 run idtAnalyzer.py to take the output of blasted sequence and calculate the melting temperature.
 
