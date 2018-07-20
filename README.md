@@ -18,9 +18,9 @@ run changefilter.py to change the selection parameter qcover and output new filt
 
 #### To make new database for blast, refer to: https://www.ncbi.nlm.nih.gov/books/NBK279688/
 
-#### use 'blastn -help' to see available functions
+#### Use 'blastn -help' to see available functions
 
-## filtering through melting temperature
+## Filter through melting temperature
 
 Goal: select a probe with melting temperature at 60-70dC (70dC preferred).
 
@@ -38,9 +38,9 @@ Adjust IDT parameters to:
 
 run idtAnalyzer.py to take the output of blasted sequence and calculate the melting temperature.
 
-## filtering through mfold
+## Filter through mfold
 Goal: check the structure of designed probe (87bp long), sequences provided by Gable. We want to find the ones have at least 7nt exposed of range 40-50, and at least 7nt exposed for sequence range 50-80 (according to Gable).
 
 run mfold.py to get output pdf of the first outputed structure from mfold.
 
-## combine all results and find the best desgin!!!!
+## Combine all results and find the best desgin!!!!
